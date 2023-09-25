@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Space Grotesk';
+    font-size: 18px;
+    color: white;
+}
+
+.toaster {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    margin: 0 auto;
+    z-index: 1;
+    background: black;
+}
+
+.toaster--warning {
+    color: #E9D502;
+}
+
+.helper {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.463);
+}
+
+.helper img {
+    width: 100px;
+    height: auto;
+}
+
+.disabled {
+    display: none;
+    z-index: -999;
+}
+
+.loading__screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+}
+
+.profile__content h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+}
+
+.profile__content {
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.profile__content p {
+    font-style: italic;
+    text-align: right;
+    font-size: 3rem;
+}
+
+.explore {
+    outline: unset;
+    border: unset;
+    width: max-content;
+    position: relative;
+    z-index: 0;
+    padding: 1rem 3rem;
+    color: white;
+    border-radius: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    background: #542BEC;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: #fff;
+    color: black;
+    cursor: progress;
+}
+
+.explore:hover {
+    color: black;
+    background-color: white;
+}
+
+.profile__content {
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .profile__content {
+        padding: 1rem;
+    }
+    .profile__content h1 {
+        font-size: 2.5rem;
+        line-height: unset;
+    }
+    .profile__content p {
+        font-size: 1.5rem;
+        line-height: unset;
+    }
+    .explore {
+        width: 100%;
+        font-size: 1.0rem;
+        white-space: nowrap;
+    }
+}
